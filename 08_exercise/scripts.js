@@ -62,6 +62,7 @@ function createFrame(pQuestion) {
         quiz.innerHTML += `<li><input type="radio" name="answer id="${i}"> <label for="${i}">${pQuestion.answers[i]}</label></li>`;
     }
     quiz.innerHTML += `</ul>`;
+    body.style.backgroundColor = "white";
 }
 
 function renderQuestions(pQuestion) {
