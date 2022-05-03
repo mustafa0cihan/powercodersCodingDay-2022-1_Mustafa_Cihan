@@ -1,33 +1,36 @@
 /* Text Elements */
 
 h1 {
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   color: #dae4e9;
-  letter-spacing: -.015em;
+  letter-spacing: -0.015em;
   font-weight: 700;
   font-size: 16vmin;
-  font-family: 'Arimo', cursive;
+  font-family: "Arimo", cursive;
   line-height: 1;
 }
 
 aside p {
   text-indent: 0vw;
   font-weight: 700;
-  font-size: .9rem;
-  font-family: 'Arimo', cursive;
+  font-size: 0.9rem;
+  font-family: "Arimo", cursive;
 }
 
 p {
   margin-bottom: 0;
   color: #dae4e9;
   text-indent: 2vw;
-  font-size: .8rem;
-  font-family: 'Lora', cursive;
+  font-size: 0.8rem;
+  font-family: "Lora", cursive;
 }
 
 /* Layout Elements */
 
-html, body {
+html,
+body {
+  /* border-box has been added. */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -60,6 +63,29 @@ picture {
 
 .fig-2 {
   display: none;
+}
+
+/* Width value has been added to the image in fig1. */
+.fig1 img {
+  width: 120px;
+}
+
+/* Grid structure has been added to the main element and the elements have been relocated. */
+main {
+  padding-top: 2vh;
+  grid-template-areas:
+    "fig-1 aside"
+    "title title"
+    "banner banner"
+    "banner banner"
+    "main main";
+  grid-template-rows: 50vh repeat(1, 40vh);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Changed color of "Deadly" text. It was also placed on a bottom line with a tag <br>. */
+span {
+  color: rgb(214, 35, 74);
 }
 
 @supports (display: grid) {
@@ -97,10 +123,34 @@ picture {
 
 @media screen and (min-width: 40rem) {
   @supports (display: grid) {
-      /* Layout Elements */
+    /* Layout Elements */
 
     main {
       padding-top: 2vh;
+      /* Grid structure has been updated to the main element and the elements have been reordered. */
+      grid-template-areas:
+        "fig-1 fig-1 aside aside aside"
+        ". title title title title"
+        "banner banner banner banner banner"
+        ". main main main main"
+        ". main main main main";
+      grid-template-rows: 60vh 50vh repeat(3, 1fr);
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    /* Added font-size value to the paragraph inside the Aside. */
+    aside p {
+      font-size: 2rem;
+    }
+
+    /* The size of the img has been set as like 100%. */
+    img {
+      width: 100%;
+    }
+
+    /* The max-width of the picture has been set as like 800px. */
+    picture {
+      max-width: 800px;
     }
   }
 }
@@ -111,34 +161,42 @@ picture {
   }
 
   @supports (display: grid) {
-      /* Layout Elements */
+    /* Layout Elements */
 
     main {
       padding-right: 0vw;
       padding-left: 0vw;
 
-      grid-template-areas: '. aside . fig-2 fig-2' 'title title banner banner banner' 'fig-1 main banner banner banner';
-      grid-template-rows: repeat(3 , auto);
-      grid-template-columns: repeat(5 , 1fr);
+      grid-template-areas:
+        ". aside . fig-2 fig-2"
+        "title title banner banner banner"
+        "fig-1 main banner banner banner";
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: repeat(5, 1fr);
     }
 
     section {
       -webkit-column-width: 12em;
-         -moz-column-width: 12em;
-              column-width: 12em;
+      -moz-column-width: 12em;
+      column-width: 12em;
       -webkit-column-gap: 1.5rem;
-         -moz-column-gap: 1.5rem;
-              column-gap: 1.5rem;
+      -moz-column-gap: 1.5rem;
+      column-gap: 1.5rem;
     }
 
     picture {
-        max-width: 800px;
+      max-width: 800px;
     }
 
     .fig-2 {
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
 
       grid-area: fig-2;
+    }
+
+    /* Added font-size value to the paragraph inside the Aside. */
+    aside p {
+      font-size: 1rem;
     }
   }
 }

@@ -1,0 +1,153 @@
+html {
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+   box-sizing: inherit;
+   margin: 0;
+}
+
+body {
+   background-color: rgb(204,204,204);
+}
+
+header {
+   max-width: 100vw;
+   width: 100vw;
+   max-height: 10vh;
+   height: 10vh;
+   background-color: #fff;
+   border: 1px solid #ccc;
+}
+
+figure {
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   padding: 20px 50px;
+   background-color: rgba(255, 255, 255, 0.815);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.815);
+}
+
+h3 {
+   font-style: italic;
+   margin-left: 1vw;
+}
+
+a {
+   text-decoration: none;
+   color: #ccc;
+}
+
+main {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: #ccc;
+   background-color: rgb(243,245,249);
+}
+
+main .left-side {
+   width: 300px;
+   background-color: #fff;
+   min-height: 400px;
+   height: 700px;
+   border-right: 1px solid #ccc;
+   padding: 0;
+}
+
+main .left-side ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0;
+}
+
+main .left-side li {
+   list-style-type: none;
+   font-size: 1.5rem;
+   border-bottom: 1px solid #ccc;
+   padding: 10px 40px;
+   color: #ccc;
+}
+
+article {
+   width: 50vw;
+}
+
+article  section {
+   width: 50vw;
+   height: 15vh;
+   padding: 2vh 2vw;
+   background-color: #fff;
+   margin: 4vh;
+   box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.11);
+-webkit-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.11);
+-moz-box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.11);
+}
+
+article section h2{
+   color: rgb(76, 168, 119);
+   margin-bottom: 4vh;
+}
+
+article section p {
+    color: #ccc;
+    font-size: large;
+}
+
+main .right-side {
+   width: 200px;
+   background-color: rgba(255, 255, 255, 0.815);
+   min-height: 400px;
+   height: 700px;
+   border-right: 1px solid #ccc;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+main .right-side section {
+   width: 7vw;
+   height: 15vh;
+   text-align: center;
+   padding-top: 20px;
+   border: 1px solid #ccc;
+   margin: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+footer {
+   max-width: 100vw;
+   width: 100vw;
+   height: 20vh;
+   max-height: 20vh;
+   background-color: #000;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   color: #fff;
+}
+
+footer ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 0;
+   float: right;
+   text-align: right;
+   margin-top: 30px;
+   margin-right: 30px;
+}
+
+footer li {
+   list-style-type: none;
+   margin-top: 10px;
+}
+

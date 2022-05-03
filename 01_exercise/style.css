@@ -3,7 +3,11 @@ h1 {
 	font-family: 'Roboto', sans-serif;
 }
 
+/* It has been add flex structure and items has been set in the center. */
 .robots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .head, 
@@ -23,8 +27,11 @@ h1 {
 	margin-bottom: 10px;
 } 
 
+/* The flex structure has been added for the placement of the eyes. */
 .eyes {
-	
+	display: flex;
+	justify-content: center;
+	position: relative;
 }
 
 .upper_body { 
@@ -58,7 +65,10 @@ h1 {
 	height: 200px;
 	/* This is another useful property. Hmm what do you think it does?*/
 	margin: 0 auto;
-
+	/* The flex structure has been added for the placement of the lower body. */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 } 
 
 .left_leg, .right_leg { 
@@ -68,7 +78,9 @@ h1 {
 } 
 
 .left_leg { 
-	margin-left: 45px; 
+	/* margin-left: 45px; */
+	/* margin-left has been deleted and margin-top added. */
+	margin-top: -50px; 
 } 
 
 .left_leg:hover {
@@ -80,7 +92,9 @@ h1 {
 }
 
 .right_leg { 
-	margin-left: 30px; 
+	margin-left: 30px;
+	/*margin-top added. */
+	margin-top: -50px;
 }
 
 .left_eye, .right_eye { 
@@ -93,15 +107,19 @@ h1 {
 .left_eye { 
 	/* These properties are new and you haven't encountered
 	in this course. Check out CSS Tricks to see what it does! */
-	position: relative; 
+
+	/* Changed position from relative to absolute. */
+	position: absolute;
 	top: 100px; 
 	left: 40px; 
 } 
 
 .right_eye { 
-	position: relative; 
+
+	/* Changed position from relative to absolute. The value of left has been changed as 140px. */
+	position: absolute; 
 	top: 100px; 
-	left: 120px; 
+	left: 140px; 
 }
 
 
